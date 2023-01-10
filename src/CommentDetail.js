@@ -1,6 +1,8 @@
 import { faker } from '@faker-js/faker';
 
-function CommentDetail() {
+function CommentDetail(props) {
+    console.log(props);
+
     return (
         <div className="comment">
             <a href="/" className="avatar">
@@ -8,7 +10,7 @@ function CommentDetail() {
             </a>
             <div className="content">
                 <a href="/" className="author">
-                    Sam
+                    {props.author}
                 </a>
                 <div className="metadata">
                     <span className="date">Today at 6:00PM</span>
